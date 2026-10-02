@@ -3,30 +3,23 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>OPIUM UC</title>
+<title>OPIUM UC 24/7</title>
 <script src="https://telegram.org/js/telegram-web-app.js?63"></script>
 <style>
-:root{--bg:#090a0d;--card:#14161b;--card2:#1b1e24;--text:#fff;--muted:#8f949e;--accent:#ff315b;--line:#ffffff12}
+:root{--bg:#090a0d;--card:#14161b;--card2:#1b1e24;--text:#fff;--muted:#8f949e;--accent:#ff315b;--line:#ffffff12;--ok:#8de2a0}
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-.app{max-width:720px;margin:auto;padding:14px 14px 100px}
-.top{display:flex;align-items:center;justify-content:space-between;padding:8px 4px 18px}
-.logo{font-size:23px;font-weight:900;letter-spacing:-.7px}.online{font-size:11px;color:#8de2a0;background:#16321f;padding:7px 10px;border-radius:20px}
-.hero{padding:22px;border-radius:25px;background:linear-gradient(145deg,#1a1c23,#101116);border:1px solid var(--line);margin-bottom:18px}
-.hero h1{font-size:28px;margin:0 0 7px}.hero p{margin:0;color:var(--muted);line-height:1.45}
-.section{font-size:17px;font-weight:850;margin:18px 3px 10px}
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
-.card{border:1px solid var(--line);background:var(--card);color:#fff;border-radius:21px;padding:17px;text-align:left;min-height:118px}
-.card:active{background:var(--card2);transform:scale(.985)}
+.app{max-width:720px;margin:auto;padding:14px 14px 100px}.top{display:flex;align-items:center;justify-content:space-between;padding:8px 4px 18px}
+.logo{font-size:23px;font-weight:900;letter-spacing:-.7px}.online{font-size:11px;color:var(--ok);background:#16321f;padding:7px 10px;border-radius:20px}
+.hero{padding:22px;border-radius:25px;background:linear-gradient(145deg,#1a1c23,#101116);border:1px solid var(--line);margin-bottom:18px}.hero h1{font-size:28px;margin:0 0 7px}.hero p{margin:0;color:var(--muted);line-height:1.45}
+.section{font-size:17px;font-weight:850;margin:18px 3px 10px}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.card{border:1px solid var(--line);background:var(--card);color:#fff;border-radius:21px;padding:17px;text-align:left;min-height:118px}.card:active{background:var(--card2);transform:scale(.985)}
 .uc{font-size:19px;font-weight:900}.price{color:#ff6481;font-weight:900;font-size:17px;margin-top:9px}.choose{color:#777e89;font-size:12px;margin-top:10px}
-.page{display:none}.page.active{display:block}
-.input{width:100%;padding:16px;border-radius:17px;border:1px solid var(--line);background:var(--card);color:#fff;font-size:16px;outline:none}
-.btn{width:100%;padding:16px;border:0;border-radius:17px;margin-top:11px;font-weight:900;font-size:15px}.primary{background:var(--accent);color:#fff}.secondary{background:var(--card);color:#fff;border:1px solid var(--line)}
-.info{background:var(--card);border:1px solid var(--line);padding:18px;border-radius:20px;line-height:1.7;color:#d6d8de}
-.nav{position:fixed;bottom:12px;left:50%;transform:translateX(-50%);width:min(650px,calc(100% - 22px));display:grid;grid-template-columns:repeat(3,1fr);padding:7px;background:#15171de8;backdrop-filter:blur(18px);border:1px solid var(--line);border-radius:20px}
-.nav button{border:0;background:transparent;color:#8c919b;padding:10px 3px;border-radius:14px;font-size:12px;font-weight:800}.nav .on{background:#272a31;color:#fff}
-.back{background:none;border:0;color:#ff6682;padding:7px 0 14px;font-size:14px}
-.demo{margin-top:10px;color:#ffb4c2;font-size:12px}
+.page{display:none}.page.active{display:block}.input{width:100%;padding:17px;border-radius:17px;border:1px solid var(--line);background:var(--card);color:#fff;font-size:18px;outline:none}.input:focus{border-color:#ff315b88}
+.btn{width:100%;padding:16px;border:0;border-radius:17px;margin-top:11px;font-weight:900;font-size:15px}.primary{background:var(--accent);color:#fff}.secondary{background:var(--card);color:#fff;border:1px solid var(--line)}.disabled{opacity:.5;pointer-events:none}
+.info{background:var(--card);border:1px solid var(--line);padding:18px;border-radius:20px;line-height:1.7;color:#d6d8de}.nav{position:fixed;bottom:12px;left:50%;transform:translateX(-50%);width:min(650px,calc(100% - 22px));display:grid;grid-template-columns:repeat(3,1fr);padding:7px;background:#15171de8;backdrop-filter:blur(18px);border:1px solid var(--line);border-radius:20px}.nav button{border:0;background:transparent;color:#8c919b;padding:10px 3px;border-radius:14px;font-size:12px;font-weight:800}.nav .on{background:#272a31;color:#fff}
+.back{background:none;border:0;color:#ff6682;padding:7px 0 14px;font-size:14px}.demo{margin-top:10px;color:#ffb4c2;font-size:12px}.status{margin-top:14px;padding:16px;border-radius:18px;background:#15181e;border:1px solid var(--line)}.status.ok{border-color:#8de2a044;background:#122018}.status h3{margin:0 0 8px;font-size:18px}.muted{color:var(--muted)}.nick{font-size:20px;font-weight:900;margin-top:5px}.loader{display:inline-block;width:15px;height:15px;border:2px solid #ffffff44;border-top-color:#fff;border-radius:50%;vertical-align:-3px;margin-right:7px;animation:spin .8s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}
+.payment{padding:18px;border-radius:20px;background:var(--card);border:1px solid var(--line)}.sum{display:flex;justify-content:space-between;padding:9px 0;color:#cfd2d8}.sum.total{border-top:1px solid var(--line);margin-top:7px;padding-top:15px;font-weight:900;color:#fff;font-size:18px}
 </style>
 </head>
 <body>
@@ -34,40 +27,38 @@ body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,B
 <div class="top"><div><div class="logo">OPIUM UC 24/7</div><div style="color:var(--muted);font-size:12px">PUBG MOBILE</div></div><div class="online">● 24/7</div></div>
 
 <div id="shop" class="page active">
-<div class="hero"><h1>Пополнить UC</h1><p>Выберите пакет UC. Интерфейс сейчас работает в демонстрационном режиме.</p></div>
-<div class="section">Популярные пакеты</div>
-<div id="products" class="grid"></div>
+<div class="hero"><h1>Пополнить UC</h1><p>Выберите пакет UC. После выбора сначала проверим Player ID, и только после успешной проверки покажем оплату.</p></div>
+<div class="section">Популярные пакеты</div><div id="products" class="grid"></div>
 </div>
 
 <div id="buy" class="page">
 <button class="back" onclick="show('shop')">← Вернуться к товарам</button>
 <div class="hero"><h1 id="buyTitle">Покупка</h1><p id="buyPrice"></p></div>
 <div class="section">Player ID PUBG Mobile</div>
-<input id="pid" class="input" inputmode="numeric" placeholder="Введите Player ID">
-<button class="btn primary" onclick="demoPay()">Продолжить</button>
-<div class="demo">Демо: LAVA и реальная оплата пока не подключены.</div>
+<input id="pid" class="input" inputmode="numeric" autocomplete="off" placeholder="Введите Player ID">
+<button id="checkBtn" class="btn primary" onclick="checkPlayer()">🔎 Проверить Player ID</button>
+<div id="checkResult"></div>
+<div class="demo">Демо: проверка сейчас имитируется. Ragner API и реальная оплата не подключены.</div>
 </div>
 
-<div id="info" class="page">
-<div class="section">Информация</div>
-<div class="info"><b>Наш бот работает 24/7 специально для вас ❤️‍🔥</b><br><br>
-🛍️ Магазин — <a href="https://t.me/opium_uc_shop" style="color:#ff6682">@opium_uc_shop</a><br>
-✅ Отзывы — <a href="https://t.me/+Qlle2ne3MYViNmIy" style="color:#ff6682">отзывы</a><br>
-☎️ Техническая поддержка — <a href="https://t.me/Underrated77" style="color:#ff6682">@Underrated77</a><br><br>
-<span id="user"></span></div>
+<div id="payment" class="page">
+<button class="back" onclick="show('buy')">← Назад к проверке</button>
+<div class="hero"><h1>💳 Оплата</h1><p>Player ID уже прошёл демонстрационную проверку.</p></div>
+<div class="payment">
+<div class="sum"><span>Пакет</span><b id="payProduct">—</b></div>
+<div class="sum"><span>Player ID</span><b id="payPlayer">—</b></div>
+<div class="sum"><span>Никнейм</span><b id="payNick">—</b></div>
+<div class="sum total"><span>К оплате</span><span id="payPrice">—</span></div>
+<button class="btn primary" onclick="demoPayment()">💳 Перейти к оплате</button>
+</div>
+<div class="demo">Демо: здесь позже будет открываться реальная платёжная страница LAVA.</div>
 </div>
 
-<div id="support" class="page">
-<div class="section">Поддержка</div>
-<div class="info">Если возник вопрос — напишите в техническую поддержку.<button class="btn secondary" onclick="support()">☎️ Написать в поддержку</button></div>
-</div>
+<div id="info" class="page"><div class="section">Информация</div><div class="info"><b>Наш бот работает 24/7 специально для вас ❤️‍🔥</b><br><br>🛍️ Магазин — <a href="https://t.me/opium_uc_shop" style="color:#ff6682">@opium_uc_shop</a><br>✅ Отзывы — <a href="https://t.me/+Qlle2ne3MYViNmIy" style="color:#ff6682">отзывы</a><br>☎️ Техническая поддержка — <a href="https://t.me/Underrated77" style="color:#ff6682">@Underrated77</a><br><br><span id="user"></span></div></div>
+<div id="support" class="page"><div class="section">Поддержка</div><div class="info">Если возник вопрос — напишите в техническую поддержку.<button class="btn secondary" onclick="support()">☎️ Написать в поддержку</button></div></div>
 </div>
 
-<div class="nav">
-<button id="shopBtn" class="on" onclick="show('shop')">🛒 Магазин</button>
-<button id="infoBtn" onclick="show('info')">ℹ️ Инфо</button>
-<button id="supportBtn" onclick="show('support')">☎️ Поддержка</button>
-</div>
+<div class="nav"><button id="shopBtn" class="on" onclick="show('shop')">🛒 Магазин</button><button id="infoBtn" onclick="show('info')">ℹ️ Инфо</button><button id="supportBtn" onclick="show('support')">☎️ Поддержка</button></div>
 
 <script>
 const tg=window.Telegram?.WebApp;
@@ -75,12 +66,24 @@ if(tg){tg.ready();tg.expand();try{tg.setHeaderColor('#090a0d');tg.setBackgroundC
 const products=[[60,79],[325,423],[385,500],[660,823],[720,900],[1320,1645],[1800,2055],[3850,3999],[8100,7850]];
 const box=document.getElementById('products');
 box.innerHTML=products.map((p,i)=>`<button class="card" onclick="select(${i})"><div class="uc">💸 ${p[0]} UC</div><div class="price">${p[1].toLocaleString('ru-RU')} ₽</div><div class="choose">Выбрать пакет →</div></button>`).join('');
-let selected;
-function select(i){selected=products[i];document.getElementById('buyTitle').textContent=`💸 ${selected[0]} UC`;document.getElementById('buyPrice').textContent=`Стоимость: ${selected[1].toLocaleString('ru-RU')} ₽`;document.getElementById('pid').value='';show('buy')}
-function demoPay(){const id=document.getElementById('pid').value.trim();if(!/^\d+$/.test(id)){alert('Введите Player ID цифрами');return}if(tg)tg.sendData(JSON.stringify({mode:'demo',product:selected[0],price:selected[1],player_id:id}));else alert(`Демо заказа: ${selected[0]} UC / ${selected[1]} ₽ / ID ${id}`)}
+let selected=null;let verified=null;
+function select(i){selected=products[i];verified=null;document.getElementById('buyTitle').textContent=`💸 ${selected[0]} UC`;document.getElementById('buyPrice').textContent=`Стоимость: ${selected[1].toLocaleString('ru-RU')} ₽`;document.getElementById('pid').value='';document.getElementById('checkResult').innerHTML='';document.getElementById('checkBtn').className='btn primary';document.getElementById('checkBtn').disabled=false;show('buy')}
+function checkPlayer(){
+ const id=document.getElementById('pid').value.trim(); const result=document.getElementById('checkResult'); const btn=document.getElementById('checkBtn');
+ if(!/^\d{6,12}$/.test(id)){result.innerHTML='<div class="status"><b>⚠️ Проверьте Player ID</b><div class="muted" style="margin-top:6px">Для демо нужен числовой ID длиной от 6 до 12 цифр.</div></div>';return}
+ btn.disabled=true;btn.className='btn secondary';result.innerHTML='<div class="status"><span class="loader"></span> Проверяем Player ID…</div>';
+ setTimeout(()=>{
+   // DEMO ONLY: this is a simulated successful provider response.
+   const nick='Player_'+id.slice(-4);
+   verified={player_id:id,nickname:nick};
+   result.innerHTML=`<div class="status ok"><h3>✅ Игрок найден</h3><div class="muted">Никнейм PUBG Mobile</div><div class="nick">${nick}</div><div class="muted" style="margin-top:7px">ID: ${id}</div><button class="btn primary" onclick="goPayment()">💳 Оплатить ${selected[1].toLocaleString('ru-RU')} ₽</button></div>`;
+   btn.disabled=false;btn.className='btn primary';
+ },900);
+}
+function goPayment(){if(!verified||!selected)return;document.getElementById('payProduct').textContent=`💸 ${selected[0]} UC`;document.getElementById('payPlayer').textContent=verified.player_id;document.getElementById('payNick').textContent=verified.nickname;document.getElementById('payPrice').textContent=`${selected[1].toLocaleString('ru-RU')} ₽`;show('payment')}
+function demoPayment(){alert('ДЕМО: здесь откроется реальная платёжная страница LAVA. Деньги сейчас не списываются. После подтверждения оплаты бот создаст заказ Ragner.')}
 function show(p){document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));document.getElementById(p).classList.add('active');document.querySelectorAll('.nav button').forEach(x=>x.classList.remove('on'));const b=document.getElementById(p+'Btn');if(b)b.classList.add('on');scrollTo(0,0)}
 function support(){if(tg)tg.openTelegramLink('https://t.me/Underrated77');else location.href='https://t.me/Underrated77'}
 const u=tg?.initDataUnsafe?.user;if(u)document.getElementById('user').innerHTML=`📌 Ваш TG ID: <b>${u.id}</b><br>👤 Никнейм: <b>${u.username?'@'+u.username:'@Не указан'}</b>`;
 </script>
-</body>
-</html>
+</body></html>
